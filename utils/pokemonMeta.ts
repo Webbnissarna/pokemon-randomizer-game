@@ -1,0 +1,43 @@
+import * as CSS from "csstype";
+
+export enum Type {
+  Bug = "Bug",
+  Dark = "Dark",
+  Dragon = "Dragon",
+  Electric = "Electric",
+  Fairy = "Fairy",
+  Fighting = "Fighting",
+  Fire = "Fire",
+  Flying = "Flying",
+  Ghost = "Ghost",
+  Grass = "Grass",
+  Ground = "Ground",
+  Ice = "Ice",
+  Normal = "Normal",
+  Poison = "Poison",
+  Psychic = "Psychic",
+  Rock = "Rock",
+  Steel = "Steel",
+  Water = "Water",
+}
+
+export const TypeColor: Record<Type, CSS.Property.Color> = {
+  Bug: "#A8B820",
+  Dark: "#6A5D55",
+  Dragon: "#7038F8",
+  Electric: "#F8D030",
+  Fairy: "#EE99AC",
+  Fighting: "#C03028",
+  Fire: "#F08030",
+  Flying: "#A890F0",
+  Ghost: "#705898",
+  Grass: "#78C850",
+  Ground: "#E0C068",
+  Ice: "#98D8D8",
+  Normal: "#A8A878",
+  Poison: "#A040A0",
+  Psychic: "#F85888",
+  Rock: "#B8A038",
+  Steel: "#B8B8D0",
+  Water: "#6890F0",
+};

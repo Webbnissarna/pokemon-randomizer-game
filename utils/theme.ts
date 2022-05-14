@@ -1,17 +1,70 @@
-const theme = {
+import { Theme, useThemeUI, ThemeUIContextValue } from "theme-ui";
+
+const makeTheme = <T extends Theme>(t: T) => t;
+
+const theme = makeTheme({
   colors: {
-    text: "#111",
-    background: "#300",
-    primary: "tomato",
-    secondary: "#3f3f3f",
-    muted: "#e0e0e0",
-    highlight: "#9f9f9f",
-    gray: "#6c6c6c",
-    accent: "#3f3f3f",
+    text: "#000",
+    background:
+      "linear-gradient(0deg, rgba(255,172,252,1) 0%, rgba(157,214,255,1) 100%);",
+
+    ball: {
+      active: {
+        top: "#ff6060",
+        middle: "#606060",
+        bottom: "#ffffff",
+      },
+      disabled: {
+        top: "#4f4f4f",
+        middle: "#414141",
+        bottom: "#838383",
+      },
+    },
+
+    positive: "#73FF67",
+    positiveText: "#333333",
+    negative: "#FF6767",
+    negativeText: "#FFFFFF",
+    neutral: "#67C8FF",
+    neutralText: "#000000",
+    secondary: "#4E7999",
+    secondaryText: "#FFFFFF",
+    tertiary: "#FFFFFF",
+    tertiaryText: "#000000",
   },
   fonts: {
-    body: "Comic Sans MS",
+    body: "'Noto Sans JP', sans-serif",
   },
-};
+  shadows: {
+    sm: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
+    md: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+    inset: "inset 4px 4px 0px rgba(0, 0, 0, 0.25);",
+  },
+  radii: {
+    sm: 5,
+    md: 10,
+  },
+  fontSizes: {
+    xxs: 9,
+    xs: 10,
+    sm: 12,
+    md: 14,
+    lg: 18,
+    xl: 24,
+  },
+
+  styles: {
+    root: {
+      fontFamily: "body",
+    },
+  },
+});
 
 export default theme;
+export type ThemeType = typeof theme;
+
+interface ExactContextValue extends Omit<ThemeUIContextValue, "theme"> {
+  theme: ThemeType;
+}
+
+export const useTheme = useThemeUI as unknown as () => ExactContextValue;

@@ -1,9 +1,16 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import { Text } from "theme-ui";
 
-const Home: NextPage = () => {
-  return <div>Yo</div>;
+/* const MyDiv = styled(Box)`
+  height: 100px;
+  width: 100px;
+  background: ${(data: { theme?: ThemeType }) => data.theme!.colors.something};
+  color: blue;
+`;
+ */
+
+const Start: NextPage = () => {
+  return <Text>Heloo</Text>;
 };
 
-export default Home;
+export default Start;
