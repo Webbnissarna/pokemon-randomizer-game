@@ -23,7 +23,7 @@ const theme = makeTheme({
 
     positive: "#73FF67",
     positiveText: "#333333",
-    negative: "#FF6767",
+    negative: "#B30000",
     negativeText: "#FFFFFF",
     neutral: "#67C8FF",
     neutralText: "#000000",
@@ -31,6 +31,9 @@ const theme = makeTheme({
     secondaryText: "#FFFFFF",
     tertiary: "#FFFFFF",
     tertiaryText: "#000000",
+
+    inputBackground: "#D0D0D0",
+    inputText: "#3D3D3D",
   },
   fonts: {
     body: "'Noto Sans JP', sans-serif",

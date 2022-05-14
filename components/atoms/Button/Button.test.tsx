@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from "@testing-library/react";
-import Button from "./";
+import Button from ".";
 
 describe("Button", () => {
   it("renders", () => {
@@ -12,6 +12,7 @@ describe("Button", () => {
           onClick={() => undefined}
         />
       );
+
     expect(func).not.toThrow();
   });
 
@@ -28,6 +29,7 @@ describe("Button", () => {
     );
 
     const element = screen.getByText(text);
+
     expect(element).toBeTruthy();
   });
 
