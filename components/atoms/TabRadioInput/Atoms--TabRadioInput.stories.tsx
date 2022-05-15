@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Flex } from "theme-ui";
 import TabRadioInput from "./TabRadioInput";
+import { OnChangeEvent } from "./TabRadioInput.types";
 
 export function Default() {
   const values = ["Solo", "2-player"];
   const [selected, setSelected] = useState(values[0]);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e: OnChangeEvent) => {
     setSelected(e.target.value);
   };
   return (

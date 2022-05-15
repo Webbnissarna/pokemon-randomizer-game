@@ -34,9 +34,12 @@ const theme = makeTheme({
 
     inputBackground: "#D0D0D0",
     inputText: "#3D3D3D",
+
+    contentBackground: "#FFFFFF",
   },
   fonts: {
     body: "'Noto Sans JP', sans-serif",
+    heading: "'Noto Sans JP', sans-serif",
   },
   shadows: {
     sm: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
@@ -46,6 +49,15 @@ const theme = makeTheme({
   radii: {
     sm: 5,
     md: 10,
+  },
+  space: {
+    md: 10,
+    lg: 18,
+  },
+  sizes: {
+    sm: 30,
+    md: 40,
+    lg: 60,
   },
   fontSizes: {
     xxs: 9,

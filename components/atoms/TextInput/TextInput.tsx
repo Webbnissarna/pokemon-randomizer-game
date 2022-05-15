@@ -1,13 +1,6 @@
 import { Input } from "theme-ui";
-
-export type OnChangeEvent = React.ChangeEvent<HTMLInputElement>;
-
-interface TextInputProps {
-  value: string;
-  onChange: (event: OnChangeEvent) => void;
-  placeholder: string;
-  disabled?: boolean;
-}
+import { mainStyle } from "./TextInput.styles";
+import type { TextInputProps } from "./TextInput.types";
 
 export default function TextInput({
   value,
@@ -24,18 +17,7 @@ export default function TextInput({
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
-        sx={{
-          borderRadius: "sm",
-          border: "0px",
-          backgroundColor: "inputBackground",
-          color: "inputText",
-          fontSize: "md",
-          fontFamily: "inherit",
-
-          "&:focus-visible, &:focus": {
-            outline: "1px solid #999",
-          },
-        }}
+        sx={mainStyle}
       />
     </>
   );

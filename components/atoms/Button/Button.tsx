@@ -1,6 +1,6 @@
 import { Button as StyledButton } from "theme-ui";
 import { variants, sizes, disabledStyle, commonStyle } from "./Button.styles";
-import { ButtonProps } from "./Button.types";
+import type { ButtonProps } from "./Button.types";
 
 export default function Button({
   text,

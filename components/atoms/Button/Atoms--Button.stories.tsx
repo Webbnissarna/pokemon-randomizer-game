@@ -13,6 +13,12 @@ export function Default({ size, variant, text, disabled }: ControlProps) {
     console.log("click", event);
   };
 
+  const sizes: [string, Size][] = [
+    ["Small", "sm"],
+    ["Medium", "md"],
+    ["Large", "lg"],
+  ];
+
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <h1>Custom</h1>
@@ -23,101 +29,78 @@ export function Default({ size, variant, text, disabled }: ControlProps) {
         text={text}
         disabled={disabled}
       />
-      <h1>Small</h1>
-      <Button onClick={onClick} size="sm" variant="positive" text="Positive" />
-      <Button onClick={onClick} size="sm" variant="negative" text="Negative" />
-      <Button onClick={onClick} size="sm" variant="neutral" text="Neutral" />
-      <Button
-        onClick={onClick}
-        size="sm"
-        variant="secondary"
-        text="Secondary"
-      />
-      <Button onClick={onClick} size="sm" variant="tertiary" text="Tertiary" />
 
-      <Button
-        onClick={onClick}
-        size="sm"
-        variant="positive"
-        text="Positive (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="sm"
-        variant="negative"
-        text="Negative (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="sm"
-        variant="neutral"
-        text="Neutral (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="sm"
-        variant="secondary"
-        text="Secondary (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="sm"
-        variant="tertiary"
-        text="Tertiary (disabled)"
-        disabled={true}
-      />
+      {sizes.map(([title, buttonSize]) => (
+        <>
+          <h1>{title}</h1>
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="positive"
+            text="Positive"
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="negative"
+            text="Negative"
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="neutral"
+            text="Neutral"
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="secondary"
+            text="Secondary"
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="tertiary"
+            text="Tertiary"
+          />
 
-      <h1>Medium</h1>
-      <Button onClick={onClick} size="md" variant="positive" text="Positive" />
-      <Button onClick={onClick} size="md" variant="negative" text="Negative" />
-      <Button onClick={onClick} size="md" variant="neutral" text="Neutral" />
-      <Button
-        onClick={onClick}
-        size="md"
-        variant="secondary"
-        text="Secondary"
-      />
-      <Button onClick={onClick} size="md" variant="tertiary" text="Tertiary" />
-
-      <Button
-        onClick={onClick}
-        size="md"
-        variant="positive"
-        text="Positive (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="md"
-        variant="negative"
-        text="Negative (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="md"
-        variant="neutral"
-        text="Neutral (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="md"
-        variant="secondary"
-        text="Secondary (disabled)"
-        disabled={true}
-      />
-      <Button
-        onClick={onClick}
-        size="md"
-        variant="tertiary"
-        text="Tertiary (disabled)"
-        disabled={true}
-      />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="positive"
+            text="Positive (disabled)"
+            disabled={true}
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="negative"
+            text="Negative (disabled)"
+            disabled={true}
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="neutral"
+            text="Neutral (disabled)"
+            disabled={true}
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="secondary"
+            text="Secondary (disabled)"
+            disabled={true}
+          />
+          <Button
+            onClick={onClick}
+            size={buttonSize}
+            variant="tertiary"
+            text="Tertiary (disabled)"
+            disabled={true}
+          />
+        </>
+      ))}
     </div>
   );
 }
@@ -131,7 +114,7 @@ Default.args = {
 
 Default.argTypes = {
   size: {
-    options: ["sm", "md"],
+    options: ["sm", "md", "lg"],
     control: { type: "select" },
   },
   variant: {

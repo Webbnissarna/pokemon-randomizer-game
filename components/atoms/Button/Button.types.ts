@@ -7,7 +7,7 @@ export type Variant =
   | "secondary"
   | "tertiary";
 
-export type Size = "sm" | "md";
+export type Size = "sm" | "md" | "lg";
 
 export type ClickEvent = ReactMouseEvent<HTMLButtonElement, MouseEvent>;
 

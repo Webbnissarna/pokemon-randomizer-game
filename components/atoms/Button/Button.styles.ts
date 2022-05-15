@@ -26,11 +26,16 @@ export const variants: Record<Variant, ThemeUIStyleObject> = {
 
 export const sizes: Record<Size, ThemeUIStyleObject> = {
   sm: {
-    height: 40,
+    height: "sm",
     fontSize: "md",
+    borderRadius: "sm",
   },
   md: {
-    height: 60,
+    height: "md",
+    fontSize: "md",
+  },
+  lg: {
+    height: "lg",
     fontSize: "xl",
   },
 };
@@ -49,15 +54,13 @@ export const commonStyle = (disabled: boolean) => ({
   fontSize: "md",
   fontFamily: "inherit",
   cursor: "pointer",
-  transition: "transform 0.1s ease-out",
+  transition: "filter 0.1s ease-out",
 
   ...(!disabled && {
     "&:hover": {
-      transform: "scale(1.05)",
       filter: "brightness(1.15)",
     },
     "&:active": {
-      transform: "scale(0.98)",
       filter: "brightness(0.95)",
     },
   }),
