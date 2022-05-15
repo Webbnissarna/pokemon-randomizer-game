@@ -6,19 +6,13 @@ import TabRadioInput from "../../atoms/TabRadioInput";
 import TextInput from "../../atoms/TextInput";
 import set from "lodash/fp/set";
 import { OnChangeEvent } from "../../atoms/TextInput/TextInput.types";
-
-interface SetupOptions {
-  playerNames: string[];
-}
-
-interface SetupProps {
-  onPlay: (setupOptions: SetupOptions) => void;
-}
-
-enum TabValue {
-  Solo = "Solo",
-  TwoPlayer = "2-player",
-}
+import type { SetupProps, SetupOptions } from "./Setup.types";
+import { TabValue } from "./Setup.types";
+import {
+  cardBoxStyle,
+  mainContainerStyle,
+  playerNamesStyle,
+} from "./Setup.styles";
 
 const tabValues = Object.values(TabValue);
 
@@ -46,21 +40,16 @@ export default function Setup({ onPlay }: SetupProps): JSX.Element {
   };
 
   return (
-    <Flex
-      sx={{
-        flexDirection: "column",
-        gap: "md",
-      }}
-    >
+    <Flex sx={mainContainerStyle}>
       <TabRadioInput
         values={tabValues}
         selected={activeTab}
         onChange={onTabChange}
       />
       <CardBox>
-        <Flex sx={{ flexDirection: "column", gap: "md" }}>
+        <Flex sx={cardBoxStyle}>
           {activeTab === TabValue.TwoPlayer && (
-            <Flex sx={{ gap: "md" }}>
+            <Flex sx={playerNamesStyle}>
               <TextInput
                 placeholder="Player 1 Name"
                 value={setupOptions.playerNames[0]}

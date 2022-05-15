@@ -57,6 +57,7 @@ const theme = makeTheme({
   space: {
     md: 10,
     lg: 18,
+    xl: 40,
   },
   sizes: {
     sm: 30,

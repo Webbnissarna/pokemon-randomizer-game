@@ -54,5 +54,12 @@
       "});",
       ""
     ]
+  },
+
+  "new style export": {
+    "scope": "typescriptreact,typescript",
+    "prefix": "style",
+    "description": "Add new style export",
+    "body": "export const $1: ThemeUIStyleObject = $0"
   }
 }
