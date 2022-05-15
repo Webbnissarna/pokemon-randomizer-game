@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+(**status**: wip)
 
-## Getting Started
+# Pokémon Randomizer Game!
 
-First, run the development server:
+A web-based game based on something I can't remember.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Pokémon Randomizer Game!](#pokémon-randomizer-game)
+  - [Gameplay](#gameplay)
+  - [Run (dev)](#run-dev)
+  - [Component Stories](#component-stories)
+  - [Tech stuff](#tech-stuff)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Gameplay
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Two players each take turns picking a Pokémon from three randomized Pokémons, with the twist the picking player is only given the randomized Pokémons name in a foreign language, relayed to them by the other player.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+After picking one of the three the Pokémons english name, randomized moves and ability are revealed, and the picking player is given the choice to either keep it, or skip it. Skips are limited and when exhausted the player must keep the Pokémon in their team regardless.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This goes on until both players have teams of 6 randomized Pokémon. From there they are given a serialized text snippet for their team that they can paste into [Pokémon Showdown](https://pokemonshowdown.com/) and battle with.
 
-## Learn More
+## Run (dev)
 
-To learn more about Next.js, take a look at the following resources:
+Project is a standard [NextJs](https://nextjs.org/) app. Run `yarn dev` to start.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Component Stories
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To see React components in isolation run `yarn ladle`.
 
-## Deploy on Vercel
+## Tech stuff
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- This project is a [NextJs](https://nextjs.org/) app
+- Styling is handled through [Theme UI](https://theme-ui.com)
+- State is handled with [XState](https://xstate.js.org/)
+- [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/) is used for testing
+- It uses [Atomic Design](https://xd.adobe.com/ideas/process/ui-design/atomic-design-principles-methodology-101/) structure for organizing components
+- Component stories are presented with [Ladle](https://ladle.dev/)
+- Commit messages are done with [Commitizen](https://github.com/commitizen/cz-cli) using [cz-emoji-conventional](https://www.npmjs.com/package/cz-emoji-conventional) format
