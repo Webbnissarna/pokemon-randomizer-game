@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render } from "../../../.jest/render";
 import { Text } from "theme-ui";
 import CardBox from ".";
 

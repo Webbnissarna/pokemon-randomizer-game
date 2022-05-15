@@ -1,4 +1,5 @@
-import { render, fireEvent, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
+import { render } from "../../../.jest/render";
 import Button from ".";
 
 describe("Button", () => {

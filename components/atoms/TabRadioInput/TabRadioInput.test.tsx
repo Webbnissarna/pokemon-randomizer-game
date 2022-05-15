@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { render } from "../../../.jest/render";
 import userEvent from "@testing-library/user-event";
 import TabRadioInput from ".";
 
