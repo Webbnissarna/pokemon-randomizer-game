@@ -54,10 +54,11 @@ export const commonStyle = (disabled: boolean) => ({
   ...(!disabled && {
     "&:hover": {
       transform: "scale(1.05)",
+      filter: "brightness(1.15)",
     },
     "&:active": {
       transform: "scale(0.98)",
-      filter: "brightness(1.15)",
+      filter: "brightness(0.95)",
     },
   }),
 });
