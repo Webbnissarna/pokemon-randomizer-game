@@ -1,3 +1,4 @@
+import React from "react";
 import Button from ".";
 import type { ClickEvent, Size, Variant } from "./Button.types";
 
@@ -31,7 +32,7 @@ export function Default({ size, variant, text, disabled }: ControlProps) {
       />
 
       {sizes.map(([title, buttonSize]) => (
-        <>
+        <React.Fragment key={title}>
           <h1>{title}</h1>
           <Button
             onClick={onClick}
@@ -99,7 +100,7 @@ export function Default({ size, variant, text, disabled }: ControlProps) {
             text="Tertiary (disabled)"
             disabled={true}
           />
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

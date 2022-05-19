@@ -44,9 +44,9 @@ const theme = makeTheme({
   shadows: {
     sm: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
     md: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-    inset: "inset 4px 4px 0px rgba(0, 0, 0, 0.25);",
 
     svgFilter: {
+      sm: "drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 2px)",
       md: "drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px)",
     },
   },
