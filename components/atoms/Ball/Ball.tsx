@@ -1,4 +1,4 @@
-import { Box } from "theme-ui";
+import { Button } from "theme-ui";
 import { useTheme } from "../../../utils/theme";
 import { activeStyle, getSizeStyle, sizeMap } from "./Ball.styles";
 import type { BallProps } from "./Ball.types";
@@ -11,16 +11,20 @@ export default function Ball({
   const { theme } = useTheme();
 
   const stateType = disabled ? "disabled" : "active";
-  const onClickFunc = disabled ? undefined : onClick;
 
   return (
-    <Box
-      role="button"
+    <Button
       sx={{
+        borderRadius: "50%",
+        backgroundColor: "transparent",
+        padding: 0,
+        margin: 0,
+
         ...getSizeStyle(size),
         ...(!disabled && activeStyle),
       }}
-      onClick={onClickFunc}
+      onClick={onClick}
+      disabled={disabled}
     >
       <svg
         width={sizeMap[size]}
@@ -91,6 +95,6 @@ export default function Ball({
           />
         </g>
       </svg>
-    </Box>
+    </Button>
   );
 }
