@@ -35,3 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 
 *.typegen.ts
+
+public/data/

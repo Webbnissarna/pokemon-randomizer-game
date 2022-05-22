@@ -20,7 +20,7 @@ This goes on until both players have teams of 6 randomized Pokémon. From there 
 
 ## Run (dev)
 
-Project is a standard [NextJs](https://nextjs.org/) app. Run `yarn dev` to start.
+Project is a standard [NextJs](https://nextjs.org/) app. Run `yarn dev` to start. In order to play you also need the data from running [pokemon-data-scraper](https://github.com/Webbnissarna/pokemon-data-scraper). Put the resulting data from `_pokecache` into this project's `public/data`.
 
 ## Component Stories
 
