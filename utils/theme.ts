@@ -55,6 +55,7 @@ const theme = makeTheme({
     md: 10,
   },
   space: {
+    sm: 5,
     md: 10,
     lg: 18,
     xl: 40,
@@ -72,6 +73,10 @@ const theme = makeTheme({
     lg: 18,
     xl: 24,
   },
+  fontWeights: {
+    md: 400,
+    lg: 700,
+  },
 
   styles: {
     root: {
@@ -79,6 +84,12 @@ const theme = makeTheme({
 
       h1: {
         fontSize: "xl",
+        fontWeight: "lg",
+      },
+
+      h2: {
+        fontSize: "xl",
+        fontWeight: "md",
       },
     },
   },
