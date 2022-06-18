@@ -21,6 +21,8 @@ const theme = makeTheme({
       },
     },
 
+    star: "#fcff79",
+
     positive: "#73FF67",
     positiveText: "#333333",
     negative: "#B30000",
