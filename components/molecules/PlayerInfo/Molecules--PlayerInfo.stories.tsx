@@ -1,15 +1,6 @@
 import { Flex } from "theme-ui";
 import PlayerInfo from ".";
-import Abilities from "../../../public/data/abilitiesList.json";
-import Pound from "../../../public/data/moves/1.json";
-import Natures from "../../../public/data/naturesList.json";
-import Pikachu from "../../../public/data/pokemon/25.json";
-import type { GeneratedPokemon } from "../../../utils/Generator/generator.types";
-import type {
-  BasicMoveInfo,
-  Nature,
-  PokemonInfo,
-} from "../../../utils/Generator/pokemon.types";
+import { mockPokemon } from "../../../utils/testHelper";
 import type { Variant } from "./PlayerInfo.types";
 
 interface ControlProps {
@@ -25,14 +16,6 @@ export function Default({
   ballCount,
   pickedCount,
 }: ControlProps): JSX.Element {
-  const mockPokemon: GeneratedPokemon = {
-    info: Pikachu as PokemonInfo,
-    nature: Natures[0] as Nature,
-    showdownExport: "",
-    ability: Abilities[0],
-    moves: [Pound, Pound, Pound, Pound] as BasicMoveInfo[],
-  };
-
   return (
     <Flex sx={{ flexDirection: "column", gap: 20 }}>
       <h1>Custom</h1>
