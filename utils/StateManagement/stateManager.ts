@@ -135,19 +135,6 @@ export const stateMachine = createMachine(
           },
         },
       },
-      decide: {
-        exit: "moveSelection",
-        always: [
-          {
-            cond: "allPlayerPartiesFull",
-            target: "results",
-          },
-          {
-            target: "pick",
-            actions: "nextPlayer",
-          },
-        ],
-      },
       preview: {
         on: {
           CHOOSE: {
@@ -160,6 +147,19 @@ export const stateMachine = createMachine(
             target: "decide",
           },
         },
+      },
+      decide: {
+        exit: "moveSelection",
+        always: [
+          {
+            cond: "allPlayerPartiesFull",
+            target: "results",
+          },
+          {
+            target: "pick",
+            actions: "nextPlayer",
+          },
+        ],
       },
       results: {
         type: "final",
