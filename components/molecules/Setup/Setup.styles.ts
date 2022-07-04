@@ -3,6 +3,8 @@ import { ThemeUIStyleObject } from "theme-ui";
 export const mainContainerStyle: ThemeUIStyleObject = {
   flexDirection: "column",
   gap: "md",
+  maxWidth: 360,
+  width: "100%",
 };
 
 export const cardBoxStyle: ThemeUIStyleObject = {

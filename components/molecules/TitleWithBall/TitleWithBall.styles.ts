@@ -5,6 +5,7 @@ export const rootStyle: ThemeUIStyleObject = {
   alignItems: "center",
   justifyContent: "center",
   height: 250,
+  maxWidth: 360,
 };
 
 export const ballContainerStyle: ThemeUIStyleObject = {
@@ -19,7 +20,7 @@ export const ballContainerStyle: ThemeUIStyleObject = {
 export const titleContainerStyle: ThemeUIStyleObject = {
   zIndex: 1,
   position: "relative",
-  width: "100%",
+  width: "100vw",
 };
 
 export const titleStyle: ThemeUIStyleObject = {
