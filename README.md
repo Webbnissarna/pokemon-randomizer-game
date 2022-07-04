@@ -8,7 +8,7 @@ A web-based game based on something I can't remember.
   - [Gameplay](#gameplay)
   - [Run (dev)](#run-dev)
   - [Component Stories](#component-stories)
-  - [Tech stuff](#tech-stuff)
+  - [Tech Stack stuff](#tech-stack-stuff)
 
 ## Gameplay
 
@@ -20,13 +20,13 @@ This goes on until both players have teams of 6 randomized Pokémon. From there 
 
 ## Run (dev)
 
-Project is a standard [NextJs](https://nextjs.org/) app. Run `yarn dev` to start. In order to play you also need the data from running [pokemon-data-scraper](https://github.com/Webbnissarna/pokemon-data-scraper). Put the resulting data from `_pokecache` into this project's `public/data`.
+Project is a standard [NextJs](https://nextjs.org/) app. Run `yarn dev` to start. In order to play you also need the data from running [pokemon-data-scraper](https://github.com/Webbnissarna/pokemon-data-scraper). Put the resulting data from `_pokecache` into this project's `public/data` so that you end up with `public/data/pokemon`, `public/data/moves` etc..
 
 ## Component Stories
 
 To see React components in isolation run `yarn ladle`.
 
-## Tech stuff
+## Tech Stack stuff
 
 - This project is a [NextJs](https://nextjs.org/) app
 - Styling is handled through [Theme UI](https://theme-ui.com)
