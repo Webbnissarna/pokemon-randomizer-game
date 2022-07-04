@@ -5,8 +5,9 @@ const makeTheme = <T extends Theme>(t: T) => t;
 const theme = makeTheme({
   colors: {
     text: "#000",
-    background:
-      "linear-gradient(0deg, rgba(255,172,252,1) 0%, rgba(157,214,255,1) 100%);",
+    background: "linear-gradient(180deg, #9DD6FF 0%, #FFACFC 100%);",
+    link: "#0029FF",
+    linkHover: "#6E86FF",
 
     ball: {
       active: {
@@ -92,6 +93,14 @@ const theme = makeTheme({
       h2: {
         fontSize: "xl",
         fontWeight: "md",
+      },
+
+      a: {
+        textDecoration: "none",
+        color: "link",
+        "&:hover": {
+          color: "linkHover",
+        },
       },
     },
   },
