@@ -14,7 +14,7 @@ import {
   playerNamesStyle,
 } from "./Setup.styles";
 
-const tabValues = Object.values(TabValue);
+const tabValues = [TabValue.TwoPlayer];
 
 export default function Setup({ onPlay }: SetupProps): JSX.Element {
   const [activeTab, setActiveTab] = useState(TabValue.TwoPlayer);
