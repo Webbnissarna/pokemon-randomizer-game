@@ -1,81 +1,78 @@
-import { useMachine } from "@xstate/react";
-import React from "react";
-import { Box, Flex, Text } from "theme-ui";
-import type { Event, SingleOrArray } from "xstate";
+import React, { Fragment } from "react";
+import { Box, Flex } from "theme-ui";
 import Button from "../components/atoms/Button";
-import {
-  addGeneratedEvent,
-  chooseEvent,
-  pickEvent,
-  skipEvent,
-  startGameEvent,
-  stateMachine,
-} from "../utils/StateManagement/stateManager";
+import { useRandomizerGame } from "../utils/StateManagement/useRandomizerGame";
 
 export default function Index() {
-  const [current, send] = useMachine(stateMachine);
-
-  const testButtons = [
-    { name: "START_GAME", event: "START_GAME" },
-    { name: "PICK 0", event: "PICK", payload: { index: 0 } },
-    { name: "PICK 1", event: "PICK", payload: { index: 1 } },
-    { name: "PICK 2", event: "PICK", payload: { index: 2 } },
-    { name: "CHOOSE", event: "CHOOSE" },
-    { name: "SKIP", event: "SKIP" },
-  ];
+  const {
+    state,
+    currentPlayer,
+    currentLineup,
+    preview,
+    players,
+    startGame,
+    pick,
+    choose,
+    skip,
+    error,
+  } = useRandomizerGame();
 
   return (
     <Box>
       <Flex sx={{ gap: "md", margin: "md" }}>
-        {testButtons.map(({ name, event, payload }) => (
-          <Button
-            key={name}
-            text={name}
-            size="sm"
-            variant="neutral"
-            onClick={() => {
-              send(
-                event as SingleOrArray<
-                  Event<
-                    | startGameEvent
-                    | addGeneratedEvent
-                    | pickEvent
-                    | chooseEvent
-                    | skipEvent
-                  >
-                >,
-                payload
-              );
-            }}
-          />
+        <Button
+          text="startGame"
+          onClick={startGame}
+          variant={"neutral"}
+          size="sm"
+        />
+        <Button
+          text="pick0"
+          onClick={() => pick(0)}
+          variant={"neutral"}
+          size="sm"
+        />
+        <Button
+          text="pick1"
+          onClick={() => pick(1)}
+          variant={"neutral"}
+          size="sm"
+        />
+        <Button
+          text="pick2"
+          onClick={() => pick(2)}
+          variant={"neutral"}
+          size="sm"
+        />
+        <Button text="choose" onClick={choose} variant={"neutral"} size="sm" />
+        <Button text="skip" onClick={skip} variant={"neutral"} size="sm" />
+      </Flex>
+      <pre>
+        {`state: ${state}`}
+        <br />
+        {`currentPlayer: ${currentPlayer}`}
+        <br />
+        {`currentLineup: ${currentLineup
+          .map((p) => p.info.name.en)
+          .join(", ")}`}
+        <br />
+        {`previewed: ${preview?.info.name.en}`}
+        <br />
+        {players.map((player, index) => (
+          <Fragment key={player.name}>
+            <br />
+            {`player ${index}: ${player.name}`}
+            <br />
+            {`skips: ${player.skips}`}
+            <br />
+            {`pokemon: ${player.pokemon.map((p) => p.info.name.en).join(", ")}`}
+            <br />
+          </Fragment>
         ))}
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
-        <pre>
-          error: {current.context.error?.name} {current.context.error?.message}
-        </pre>
-
-        <Text>Pokemon</Text>
-        <pre>
-          {`state: ${current.value}`}
-          <br />
-          {`generated: ${current.context.generated.length}`}
-          <br />
-          {`selectionStartIndex: ${current.context.selectionStartIndex}`}
-          <br />
-          {`currentPlayerIndex: ${current.context.currentPlayerIndex}`}
-          <br />
-          {`previewIndex: ${current.context.previewIndex}`}
-          <br />
-          {current.context.players.map((player, i) => (
-            <React.Fragment key={i}>
-              player {i}:{" "}
-              {player.pokemon.map((pokemon) => pokemon.info.name.en).join(", ")}
-              <br />
-            </React.Fragment>
-          ))}
-        </pre>
-      </Flex>
+        <br />
+        <br />
+        error: {error?.name} {error?.message}
+      </pre>
     </Box>
   );
 }

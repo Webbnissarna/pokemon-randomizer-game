@@ -45,7 +45,7 @@ export interface GameStateContext {
   generated: GeneratedPokemon[];
   selectionStartIndex: number;
   currentPlayerIndex: number;
-  previewIndex: number;
+  previewOffset: number;
   players: Player[];
   error?: Error;
 }
@@ -78,7 +78,7 @@ export const stateMachine = createMachine(
       generated: [],
       selectionStartIndex: 0,
       currentPlayerIndex: 0,
-      previewIndex: 0,
+      previewOffset: 0,
       players: [
         {
           name: "",
@@ -178,7 +178,7 @@ export const stateMachine = createMachine(
             pokemon: [
               ...p.pokemon,
               context.generated[
-                context.selectionStartIndex + context.previewIndex
+                context.selectionStartIndex + context.previewOffset
               ],
             ],
           })),
@@ -201,7 +201,7 @@ export const stateMachine = createMachine(
       }),
 
       setPreview: assign({
-        previewIndex: (_context, event) => event.index,
+        previewOffset: (_context, event) => event.index,
       }),
 
       setError: assign({
