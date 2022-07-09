@@ -1,27 +1,8 @@
-import * as CSS from "csstype";
+import type * as CSS from "csstype";
+import type { MoveDescription, Stat, Type } from "./Generator/pokemon.types";
 
-export enum Type {
-  Bug = "Bug",
-  Dark = "Dark",
-  Dragon = "Dragon",
-  Electric = "Electric",
-  Fairy = "Fairy",
-  Fighting = "Fighting",
-  Fire = "Fire",
-  Flying = "Flying",
-  Ghost = "Ghost",
-  Grass = "Grass",
-  Ground = "Ground",
-  Ice = "Ice",
-  Normal = "Normal",
-  Poison = "Poison",
-  Psychic = "Psychic",
-  Rock = "Rock",
-  Steel = "Steel",
-  Water = "Water",
-}
-
-export const TypeColor: Record<Type, CSS.Property.Color> = {
+export const TypeColors: Record<Type, CSS.Property.Color> = {
+  "???": "#68A090",
   Bug: "#A8B820",
   Dark: "#6A5D55",
   Dragon: "#7038F8",
@@ -41,3 +22,52 @@ export const TypeColor: Record<Type, CSS.Property.Color> = {
   Steel: "#B8B8D0",
   Water: "#6890F0",
 };
+
+export const StatShortNames: Record<Stat, string> = {
+  Attack: "Atk",
+  Defense: "Def",
+  "Sp. Attack": "Sp. Atk",
+  "Sp. Defense": "Sp. Def",
+  Speed: "Spd",
+};
+
+export const StatColors: Record<Stat, CSS.Property.Color> = {
+  Attack: "#F08030",
+  Defense: "#F8D030",
+  "Sp. Attack": "#6890F0",
+  "Sp. Defense": "#78C850",
+  Speed: "#F85888",
+};
+
+const noStatColor: CSS.Property.Color = "#ddf";
+
+export function getStatColor(stat: Stat | null): CSS.Property.Color {
+  if (!stat) {
+    return noStatColor;
+  }
+
+  return StatColors[stat];
+}
+
+export function getLatestUsefulMoveDescription(
+  descriptions: MoveDescription[]
+): MoveDescription {
+  const invalidDescriptions = [
+    // Gen 8
+    "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+  ];
+
+  const validDescriptions = descriptions.filter(
+    (data) => !invalidDescriptions.includes(data.desc)
+  );
+
+  const latestValidDescription = validDescriptions.at(-1);
+
+  if (!latestValidDescription) {
+    throw new Error(
+      `No seemingly valid descriptions for move ${JSON.stringify(descriptions)}`
+    );
+  }
+
+  return latestValidDescription;
+}
