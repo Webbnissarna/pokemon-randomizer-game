@@ -77,6 +77,7 @@ module.exports = {
           "warn",
           { argsIgnorePattern: "^_" },
         ],
+        "@typescript-eslint/consistent-type-imports": ["warn"],
       },
     },
   ],
