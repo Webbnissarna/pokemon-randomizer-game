@@ -3,12 +3,14 @@ import type {
   Nature,
   BasicMoveInfo,
   Ability,
+  MoveInfo,
+  Type,
 } from "./pokemon.types";
 
 export interface GeneratedPokemonNoExport {
   info: PokemonInfo;
   nature: Nature;
-  moves: BasicMoveInfo[];
+  moves: MoveInfo[];
   ability: Ability;
 }
 
@@ -17,5 +19,6 @@ export interface GeneratedPokemon extends GeneratedPokemonNoExport {
 }
 
 export type PokemonResolver = (dexNo: number) => Promise<PokemonInfo>;
-export type MoveResolver = (moveName: string) => Promise<BasicMoveInfo>;
-export type MoveListResolver = (moveType: string) => Promise<BasicMoveInfo[]>;
+export type BasicMoveResolver = (moveName: string) => Promise<BasicMoveInfo>;
+export type MoveResolver = (moveName: string) => Promise<MoveInfo>;
+export type MoveListResolver = (moveType: Type) => Promise<BasicMoveInfo[]>;

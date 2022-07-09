@@ -16,6 +16,7 @@ export type Type =
   | "Electric"
   | "Fairy"
   | "Fighting"
+  | "Flying"
   | "Fire"
   | "Ghost"
   | "Grass"

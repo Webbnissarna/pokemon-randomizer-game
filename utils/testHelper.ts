@@ -3,11 +3,7 @@ import type {
   GamePropGetter,
 } from "./GamePropSystem/GamePropSystem.types";
 import type { GeneratedPokemon } from "./Generator/generator.types";
-import type {
-  PokemonInfo,
-  Nature,
-  BasicMoveInfo,
-} from "./Generator/pokemon.types";
+import type { PokemonInfo, Nature, MoveInfo } from "./Generator/pokemon.types";
 
 import Pikachu from "../public/data/pokemon/25.json";
 import Pound from "../public/data/moves/1.json";
@@ -24,8 +20,8 @@ export const mockPropGetter: GamePropGetter<GeneratedPokemon> = (_) =>
 
 export const mockPokemon: GeneratedPokemon = {
   info: Pikachu as PokemonInfo,
-  nature: Natures[0] as Nature,
+  nature: Natures[6] as Nature,
   showdownExport: "",
   ability: Abilities[0],
-  moves: [Pound, Pound, Pound, Pound] as BasicMoveInfo[],
+  moves: [Pound, Pound, Pound, Pound] as MoveInfo[],
 };

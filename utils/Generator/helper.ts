@@ -32,3 +32,7 @@ export function getRandomFromList<T>(random: RNG, list: T[]): T {
   const index = getRandomInRange(random, 0, list.length - 1);
   return list[index];
 }
+
+export function isValid<T>(value: T | null | undefined): value is T {
+  return !!value;
+}

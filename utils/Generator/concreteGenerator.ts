@@ -26,6 +26,7 @@ export async function generatePokemon(
           abilityList,
           (index) => dataManager.getPokemonByIndex(index),
           (name) => dataManager.getMoveByName(name) as Promise<BasicMoveInfo>,
+          (name) => dataManager.getFullMoveInfoByName(name),
           (type) => dataManager.getMovesByType(type)
         ).then((pokemon) => {
           onPokemonGenerated?.(pokemon);

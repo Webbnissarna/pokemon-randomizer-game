@@ -174,6 +174,7 @@ describe("Generator", () => {
       [fakeAbility],
       () => Promise.resolve(fakePokemon),
       getMove,
+      getMove,
       () =>
         Promise.resolve([moveTackle, moveEmber, moveFirePunch, moveSunnyDay])
     );

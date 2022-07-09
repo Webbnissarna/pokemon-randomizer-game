@@ -2,21 +2,24 @@ import type {
   Ability,
   BasicMoveInfo,
   BasicPokemonInfo,
+  MoveInfo,
   Nature,
   PokemonInfo,
   RNG,
 } from "./pokemon.types";
-import {
+import type {
   GeneratedPokemon,
   GeneratedPokemonNoExport,
   MoveListResolver,
-  MoveResolver,
+  BasicMoveResolver,
   PokemonResolver,
+  MoveResolver,
 } from "./generator.types";
 import {
   getUniquesFromLists,
   makeRandomUniqueList,
   getRandomFromList,
+  isValid,
 } from "./helper";
 
 export function getShowdownExport({
@@ -34,7 +37,7 @@ ${moves.map((move) => `- ${move.name.en}`).join("\n")}`;
 
 async function getPossibleMoves(
   info: PokemonInfo,
-  moveResolver: MoveResolver,
+  moveResolver: BasicMoveResolver,
   moveListResolver: MoveListResolver
 ): Promise<BasicMoveInfo[]> {
   const regularMoveNames = getUniquesFromLists(
@@ -53,11 +56,12 @@ async function getPossibleMoves(
   return allPossibleMovesList;
 }
 
-function getRandomMoves(
+async function getRandomMoves(
   random: RNG,
   moveList: BasicMoveInfo[],
-  count: number
-): BasicMoveInfo[] {
+  count: number,
+  moveResolver: MoveResolver
+): Promise<MoveInfo[]> {
   const randomMoveIndices = makeRandomUniqueList(
     random,
     0,
@@ -66,8 +70,12 @@ function getRandomMoves(
   );
 
   const moves = randomMoveIndices.map((moveIndex) => moveList[moveIndex]);
+  const moveNames = moves.map((move) => move.name.en).filter<string>(isValid);
+  const fullMoves = await Promise.all(
+    moveNames.map((moveName) => moveResolver(moveName))
+  );
 
-  return moves;
+  return fullMoves;
 }
 
 export async function generatePokemon(
@@ -76,6 +84,7 @@ export async function generatePokemon(
   possibleNatures: Nature[],
   possibleAbilities: Ability[],
   pokemonResolver: PokemonResolver,
+  basicMoveResolver: BasicMoveResolver,
   moveResolver: MoveResolver,
   moveListResolver: MoveListResolver
 ): Promise<GeneratedPokemon> {
@@ -84,11 +93,16 @@ export async function generatePokemon(
 
   const allPossibleMovesList = await getPossibleMoves(
     info,
-    moveResolver,
+    basicMoveResolver,
     moveListResolver
   );
 
-  const moves = getRandomMoves(random, allPossibleMovesList, 4);
+  const moves = await getRandomMoves(
+    random,
+    allPossibleMovesList,
+    4,
+    moveResolver
+  );
   const nature = getRandomFromList(random, possibleNatures);
   const ability = getRandomFromList(random, possibleAbilities);
 
