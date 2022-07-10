@@ -1,9 +1,4 @@
-import { ThemeUIStyleObject } from "theme-ui";
-
-export const mainContainerStyle: ThemeUIStyleObject = {
-  height: "100vh",
-  maxHeight: "100%",
-};
+import type { ThemeUIStyleObject } from "theme-ui";
 
 export const contentContainerStyle: ThemeUIStyleObject = {
   flexDirection: "column",

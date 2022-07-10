@@ -29,6 +29,36 @@
     ]
   },
 
+  "new component stories with control": {
+    "scope": "typescriptreact",
+    "prefix": "storycontrol",
+    "description": "Add ladle story for component (with controls)",
+    "body": [
+      "import $1 from \".\";",
+      "",
+      "interface ControlProps {",
+      "  name: string;",
+      "  size: string;",
+      "}",
+      "",
+      "export function Default({ name }: ControlProps) {",
+      "  return <$1 name={name} />;",
+      "}",
+      "",
+      "Default.args = {",
+      "  name: \"Hello\",",
+      "  size: \"sm\",",
+      "} as ControlProps;",
+      "",
+      "Default.argTypes = {",
+      "  size: {",
+      "    options: [\"sm\", \"md\", \"lg\"],",
+      "    control: { type: \"select\" },",
+      "  },",
+      "};"
+    ]
+  },
+
   "new component index": {
     "scope": "typescriptreact,typescript",
     "prefix": "indexcomp",

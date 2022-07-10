@@ -1,4 +1,5 @@
-import { Theme, useThemeUI, ThemeUIContextValue } from "theme-ui";
+import type { Theme, ThemeUIContextValue } from "theme-ui";
+import { useThemeUI } from "theme-ui";
 
 const makeTheme = <T extends Theme>(t: T) => t;
 
