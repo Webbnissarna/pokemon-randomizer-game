@@ -1,0 +1,73 @@
+{
+  "indexNo": 2,
+  "name": {
+    "en": "Karate Chop"
+  },
+  "type": "Fighting",
+  "category": "Physical",
+  "pp": 25,
+  "power": 50,
+  "accuracy": 100,
+  "gen": 1,
+  "scrapeUrl": "https://bulbapedia.bulbagarden.net//wiki/Karate_Chop_(move)",
+  "description": [
+    {
+      "desc": "A Normal-type attack. Often turns into a critical hit and inflicts double the damage.",
+      "games": [
+        "Pokémon Stadium (English)"
+      ]
+    },
+    {
+      "desc": "A Fighting-type attack. Often turns into a critical hit and inflicts double the damage.",
+      "games": [
+        "Pokémon Stadium 2"
+      ]
+    },
+    {
+      "desc": "Has a high critical hit ratio.",
+      "games": [
+        "Pokémon Gold and Silver Versions",
+        "Pokémon Crystal Version"
+      ]
+    },
+    {
+      "desc": "A chopping attack with a high critical-hit ratio.",
+      "games": [
+        "Pokémon Ruby and Sapphire Versions",
+        "Pokémon Emerald Version",
+        "Pokémon Colosseum",
+        "Pokémon XD: Gale of Darkness"
+      ]
+    },
+    {
+      "desc": "The foe is attacked with a sharp chop. It has a high critical-hit ratio.",
+      "games": [
+        "Pokémon FireRed and LeafGreen Versions",
+        "Pokémon Diamond and Pearl Versions",
+        "Pokémon Platinum Version",
+        "Pokémon HeartGold and SoulSilver Versions",
+        "Pokémon Battle Revolution"
+      ]
+    },
+    {
+      "desc": "The target is attacked with a sharp chop. Critical hits land more easily.",
+      "games": [
+        "Pokémon Black and White Versions",
+        "Pokémon Black and White Versions 2",
+        "Pokémon X and Y",
+        "Pokémon Omega Ruby and Alpha Sapphire",
+        "Pokémon Sun and Moon",
+        "Pokémon Ultra Sun and Ultra Moon",
+        "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!"
+      ]
+    },
+    {
+      "desc": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+      "games": [
+        "Pokémon Sword and Shield",
+        "Pokémon Brilliant Diamond and Shining Pearl",
+        "Pokémon Legends: Arceus"
+      ]
+    }
+  ]
+}

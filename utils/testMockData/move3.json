@@ -1,0 +1,103 @@
+{
+  "indexNo": 19,
+  "name": {
+    "en": "Fly"
+  },
+  "type": "Flying",
+  "category": "Physical",
+  "pp": 15,
+  "power": 90,
+  "accuracy": 95,
+  "gen": 1,
+  "scrapeUrl": "https://bulbapedia.bulbagarden.net//wiki/Fly_(move)",
+  "description": [
+    {
+      "desc": "The Pokémon flies high, then strikes in the next turn. Used for flying to places already visited.",
+      "games": [
+        "Pokémon Stadium (English)"
+      ]
+    },
+    {
+      "desc": "The Pokémon flies high, then strikes in the next turn. Used to fly to places already visited.",
+      "games": [
+        "Pokémon Stadium 2"
+      ]
+    },
+    {
+      "desc": "1st turn: Fly2nd turn: Attack",
+      "games": [
+        "Pokémon Gold and Silver Versions",
+        "Pokémon Crystal Version"
+      ]
+    },
+    {
+      "desc": "Flies up on the first turn, then strikes the next turn.*Flies up on the first turn, then attacks next turn.*",
+      "games": [
+        "Pokémon Ruby and Sapphire Versions",
+        "Pokémon Emerald Version"
+      ]
+    },
+    {
+      "desc": "A 2-turn move that hits on the 2nd turn. Use it to fly to any known town.",
+      "games": [
+        "Pokémon FireRed and LeafGreen Versions"
+      ]
+    },
+    {
+      "desc": "Flies up on the first turn, then strikes the next turn.",
+      "games": [
+        "Pokémon Colosseum",
+        "Pokémon XD: Gale of Darkness"
+      ]
+    },
+    {
+      "desc": "The user soars, then strikes on the second turn. It can also be used for flying to any familiar town.*The user soars, then strikes on the second turn. It can also be used to fly to any familiar town.*",
+      "games": [
+        "Pokémon Diamond and Pearl Versions",
+        "Pokémon Platinum Version",
+        "Pokémon HeartGold and SoulSilver Versions"
+      ]
+    },
+    {
+      "desc": "The user soars high, then strikes on the second turn.",
+      "games": [
+        "Pokémon Battle Revolution"
+      ]
+    },
+    {
+      "desc": "The user soars, then strikes its target on the second turn. It can also be used for flying to any familiar town.The user soars, then strikes on the second turn. It can also be used to fly to any familiar town.*",
+      "games": [
+        "Pokémon Black and White Versions",
+        "Pokémon Black and White Versions 2"
+      ]
+    },
+    {
+      "desc": "The user soars and then strikes its target on the next turn. This can also be used to fly to any familiar town.",
+      "games": [
+        "Pokémon X and Y",
+        "Pokémon Omega Ruby and Alpha Sapphire"
+      ]
+    },
+    {
+      "desc": "The user soars and then strikes its target on the next turn.",
+      "games": [
+        "Pokémon Sun and Moon",
+        "Pokémon Ultra Sun and Ultra Moon"
+      ]
+    },
+    {
+      "desc": "The user flies up into the sky and then strikes its target on the next turn.",
+      "games": [
+        "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!",
+        "Pokémon Sword and Shield",
+        "Pokémon Legends: Arceus"
+      ]
+    },
+    {
+      "desc": "The user flies up into the sky and then strikes its target on the next turn. It’s also one of the Pokétch’s hidden moves.",
+      "games": [
+        "Pokémon Brilliant Diamond and Shining Pearl"
+      ]
+    }
+  ]
+}

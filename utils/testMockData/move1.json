@@ -1,0 +1,64 @@
+{
+  "indexNo": 1,
+  "name": {
+    "en": "Pound"
+  },
+  "type": "Normal",
+  "category": "Physical",
+  "pp": 35,
+  "power": 40,
+  "accuracy": 100,
+  "gen": 1,
+  "scrapeUrl": "https://bulbapedia.bulbagarden.net//wiki/Pound_(move)",
+  "description": [
+    {
+      "desc": "A Normal-type attack. Slightly stronger than Tackle. Many Pokémon know this move.",
+      "games": ["Pokémon Stadium (English)", "Pokémon Stadium 2"]
+    },
+    {
+      "desc": "Pounds with forelegs or tail.",
+      "games": ["Pokémon Gold and Silver Versions", "Pokémon Crystal Version"]
+    },
+    {
+      "desc": "Pounds the foe with forelegs or tail.",
+      "games": ["Pokémon Ruby and Sapphire Versions", "Pokémon Emerald Version"]
+    },
+    {
+      "desc": "A physical attack delivered with a long tail or a foreleg, etc.",
+      "games": ["Pokémon FireRed and LeafGreen Versions"]
+    },
+    {
+      "desc": "Pounds the target with forelegs or tail.",
+      "games": ["Pokémon Colosseum", "Pokémon XD: Gale of Darkness"]
+    },
+    {
+      "desc": "The foe is physically pounded with a long tail or a foreleg, etc.",
+      "games": [
+        "Pokémon Diamond and Pearl Versions",
+        "Pokémon Platinum Version",
+        "Pokémon HeartGold and SoulSilver Versions",
+        "Pokémon Battle Revolution"
+      ]
+    },
+    {
+      "desc": "The target is physically pounded with a long tail or a foreleg, etc.",
+      "games": [
+        "Pokémon Black and White Versions",
+        "Pokémon Black and White Versions 2"
+      ]
+    },
+    {
+      "desc": "The target is physically pounded with a long tail, a foreleg, or the like.",
+      "games": [
+        "Pokémon X and Y",
+        "Pokémon Omega Ruby and Alpha Sapphire",
+        "Pokémon Sun and Moon",
+        "Pokémon Ultra Sun and Ultra Moon",
+        "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!",
+        "Pokémon Sword and Shield",
+        "Pokémon Brilliant Diamond and Shining Pearl",
+        "Pokémon Legends: Arceus"
+      ]
+    }
+  ]
+}

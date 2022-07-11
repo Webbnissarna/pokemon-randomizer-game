@@ -1,0 +1,83 @@
+{
+  "indexNo": 87,
+  "name": {
+    "en": "Thunder"
+  },
+  "type": "Electric",
+  "category": "Special",
+  "pp": 10,
+  "power": 110,
+  "accuracy": 70,
+  "gen": 1,
+  "scrapeUrl": "https://bulbapedia.bulbagarden.net//wiki/Thunder_(move)",
+  "description": [
+    {
+      "desc": "The strongest of all Electric-type attacks. Has a one-in-ten chance of paralyzing the target.",
+      "games": [
+        "Pokémon Stadium (English)"
+      ]
+    },
+    {
+      "desc": "Strongest of all Electric-type attacks. Has a one-in-ten chance shot at paralyzing the target.",
+      "games": [
+        "Pokémon Stadium 2"
+      ]
+    },
+    {
+      "desc": "An attack that may cause paralysis.",
+      "games": [
+        "Pokémon Gold and Silver Versions",
+        "Pokémon Crystal Version"
+      ]
+    },
+    {
+      "desc": "A lightning attack that may cause paralysis.*Strikes the foe with thunderbolt. It may paralyze.*",
+      "games": [
+        "Pokémon Ruby and Sapphire Versions",
+        "Pokémon Emerald Version"
+      ]
+    },
+    {
+      "desc": "A brutal lightning attack that may also leave the foe paralyzed.",
+      "games": [
+        "Pokémon FireRed and LeafGreen Versions"
+      ]
+    },
+    {
+      "desc": "A lightning attack that may cause paralysis.*Strikes the target with a thunderbolt. It may paralyze.*",
+      "games": [
+        "Pokémon Colosseum",
+        "Pokémon XD: Gale of Darkness"
+      ]
+    },
+    {
+      "desc": "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.",
+      "games": [
+        "Pokémon Diamond and Pearl Versions",
+        "Pokémon Platinum Version",
+        "Pokémon HeartGold and SoulSilver Versions",
+        "Pokémon Battle Revolution"
+      ]
+    },
+    {
+      "desc": "A wicked thunderbolt is dropped on the target to inflict damage. It may also leave the target with paralysis.",
+      "games": [
+        "Pokémon Black and White Versions",
+        "Pokémon Black and White Versions 2"
+      ]
+    },
+    {
+      "desc": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.",
+      "games": [
+        "Pokémon X and Y",
+        "Pokémon Omega Ruby and Alpha Sapphire",
+        "Pokémon Sun and Moon",
+        "Pokémon Ultra Sun and Ultra Moon",
+        "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!",
+        "Pokémon Sword and Shield",
+        "Pokémon Brilliant Diamond and Shining Pearl",
+        "Pokémon Legends: Arceus"
+      ]
+    }
+  ]
+}
