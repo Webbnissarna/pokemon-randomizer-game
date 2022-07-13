@@ -1,3 +1,5 @@
+import hepburn from "hepburn";
+
 import type { GeneratedPokemon } from "../Generator/generator.types";
 import type {
   GameProp,
@@ -10,7 +12,7 @@ const japaneseGamePropSystem: GamePropSystem<GeneratedPokemon> = {
   getProp(pokemon): GameProp {
     return {
       mainProp: pokemon.info.name.ja ?? "<oops>",
-      optionalProp: "TODO: romanji ツ",
+      optionalProp: hepburn.fromKana(pokemon.info.name.ja ?? ""),
     };
   },
 };

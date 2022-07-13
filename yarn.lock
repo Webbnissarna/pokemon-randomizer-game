@@ -1893,6 +1893,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hepburn@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/hepburn/-/hepburn-1.2.0.tgz#8f6e1f03e9114b9af1ba9c94d476af4bcbc8d683"
+  integrity sha512-MlKJ0tSNB1L0Ylas0JwPykYTnQCIZWcd9TKOHmh2RmTwQrU9G4J39zUPh+eVVd8hZlyfYILdhw7vIE81A5sAAw==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.4.tgz#8467d4b3c087805d63580480890791277ce35c44"
@@ -2561,6 +2566,11 @@ buffer-from@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
   integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
+
+bulk-replace@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/bulk-replace/-/bulk-replace-0.0.1.tgz#f095682a896abd4b3d9e08de409cc222e213f9dd"
+  integrity sha512-IxLEnfsCYLjlpf6mG7SWpWgA4A8IAT5dAX3FxXHFn+6FTLf3ums771elQ74sj1BCOVanBf6esu0rEC6zgwfmIg==
 
 bytes@3.1.2:
   version "3.1.2"
@@ -4069,6 +4079,13 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+hepburn@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hepburn/-/hepburn-1.2.0.tgz#81d01bf3dc7ea83370fac5bbcbfa0f9f1a0f819f"
+  integrity sha512-xWjHb03dN/ivNcqG2vqA//sHQ0oapYGZ9QV/2TR7m2+cggxzoVpbDxZn9s/Zm1tF88/7a1IpdZyn00tNP5oABA==
+  dependencies:
+    bulk-replace "0.0.1"
 
 history@^5.3.0:
   version "5.3.0"
