@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Input renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <input
+    aria-label=""
+    class="css-kdrqma-Box"
+    placeholder=""
+    type="text"
+    value=""
+  />
+</DocumentFragment>
+`;

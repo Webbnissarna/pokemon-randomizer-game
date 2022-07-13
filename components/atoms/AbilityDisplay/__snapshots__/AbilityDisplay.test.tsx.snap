@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AbilityDisplay renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <div
+    class="css-1widqzo-Box"
+  >
+    <span
+      class="css-rkxxop-Box"
+    >
+      Guts
+    </span>
+    <div
+      class="css-1sugqag-Box"
+    >
+      <span
+        class="css-3u1sqa-Box"
+      >
+        It's so gutsy that having a status condition boosts the Pokémon's Attack stat.
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

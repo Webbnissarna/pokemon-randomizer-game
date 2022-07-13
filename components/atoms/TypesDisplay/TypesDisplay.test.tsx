@@ -3,8 +3,8 @@ import TypesDisplay from ".";
 
 describe("TypesDisplay", () => {
   it("renders", () => {
-    const func = () => render(<TypesDisplay types={[]} />);
+    const { asFragment } = render(<TypesDisplay types={[]} />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

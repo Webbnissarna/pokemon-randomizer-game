@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Start renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <div
+    class="css-dneg7v-Box"
+  >
+    <div
+      class="css-f1t8gr-Box"
+    >
+      <div
+        class="css-1vj68q-Box"
+      >
+        <div
+          class="css-x01a4x-Box"
+        >
+          <svg
+            height="100%"
+            style="filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);"
+            version="1.1"
+            viewBox="0 0 200 200"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width=".7"
+              transform="translate(-4.612 -47.502)"
+            >
+              <path
+                d="m104.61 47.502a100 100 0 0 0-100 100h200a100 100 0 0 0-100-100z"
+                fill="var(--theme-ui-colors-ball-active-top)"
+                stop-color="#000000"
+              />
+              <path
+                d="m104.61 247.5a100 100 0 0 0 100-100h-200a100 100 0 0 0 100 100z"
+                fill="var(--theme-ui-colors-ball-active-bottom)"
+                stop-color="#000000"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          class="css-jgcf2z-Box"
+        >
+          <div
+            class="css-wimkxn-Box"
+          >
+            <h1
+              class="css-1kdz7xw-Box"
+            >
+              Lorem ipsum dolor sit amet
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-rcez78-Box"
+      >
+        <div
+          class="css-1qwd1qz-Box"
+        >
+          <div
+            class="css-1d2fn-Box"
+          >
+            <input
+              checked=""
+              id=":r0:-2-player"
+              name=":r0:"
+              type="radio"
+              value="2-player"
+            />
+            <label
+              class="css-dzydor-Box"
+              for=":r0:-2-player"
+            >
+              2-player
+            </label>
+          </div>
+        </div>
+        <div
+          class="css-wimkxn-Box"
+        >
+          <div
+            class="css-1i6ye1s-Box"
+          >
+            <div
+              class="css-p1luab-Box"
+            >
+              <input
+                aria-label="Player 1 Name"
+                class="css-kdrqma-Box"
+                placeholder="Player 1 Name"
+                type="text"
+                value=""
+              />
+              <input
+                aria-label="Player 2 Name"
+                class="css-kdrqma-Box"
+                placeholder="Player 2 Name"
+                type="text"
+                value=""
+              />
+            </div>
+            <button
+              class="css-fy5kkv-Box"
+              disabled=""
+            >
+              Play
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a
+      href="https://github.com/Webbnissarna/pokemon-randomizer-game"
+    >
+      GitHub
+    </a>
+  </div>
+</DocumentFragment>
+`;

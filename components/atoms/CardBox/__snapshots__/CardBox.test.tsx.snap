@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBox renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <div
+    class="css-wimkxn-Box"
+  >
+    <span
+      class="css-1peva9n-Box"
+    >
+      Hello World
+    </span>
+  </div>
+</DocumentFragment>
+`;

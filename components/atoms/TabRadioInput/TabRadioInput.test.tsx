@@ -5,16 +5,15 @@ import TabRadioInput from ".";
 
 describe("Tab Radio Input", () => {
   it("renders", () => {
-    const func = () =>
-      render(
-        <TabRadioInput
-          values={["test"]}
-          selected="test"
-          onChange={() => undefined}
-        />
-      );
+    const { asFragment } = render(
+      <TabRadioInput
+        values={["test"]}
+        selected="test"
+        onChange={() => undefined}
+      />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("shows values", () => {

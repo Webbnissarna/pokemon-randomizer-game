@@ -3,8 +3,8 @@ import Setup from ".";
 
 describe("Setup", () => {
   it("renders", () => {
-    const func = () => render(<Setup onPlay={() => undefined} />);
+    const { asFragment } = render(<Setup onPlay={() => undefined} />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

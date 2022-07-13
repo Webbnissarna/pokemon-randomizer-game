@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab Radio Input renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <div
+    class="css-1qwd1qz-Box"
+  >
+    <div
+      class="css-1d2fn-Box"
+    >
+      <input
+        checked=""
+        id=":r0:-test"
+        name=":r0:"
+        type="radio"
+        value="test"
+      />
+      <label
+        class="css-dzydor-Box"
+        for=":r0:-test"
+      >
+        test
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

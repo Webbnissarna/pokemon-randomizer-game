@@ -1,21 +1,15 @@
 import { screen } from "@testing-library/react";
 import { render } from "../../../.jest/render";
 import PlayerInfo from ".";
-import { GeneratedPokemon } from "../../../utils/Generator/generator.types";
+import type { GeneratedPokemon } from "../../../utils/Generator/generator.types";
 
 describe("PlayerInfo", () => {
   it("renders", () => {
-    const func = () =>
-      render(
-        <PlayerInfo
-          playerName=""
-          variant="br"
-          ballCount={0}
-          pickedPokemon={[]}
-        />
-      );
+    const { asFragment } = render(
+      <PlayerInfo playerName="" variant="br" ballCount={0} pickedPokemon={[]} />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("shows the player name", () => {

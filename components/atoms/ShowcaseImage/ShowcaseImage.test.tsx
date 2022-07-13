@@ -6,10 +6,11 @@ import { toImgBase64PNG } from "../../../utils/Misc";
 
 describe("ShowcaseImage", () => {
   it("renders", () => {
-    const func = () =>
-      render(<ShowcaseImage imageSrc={toImgBase64PNG(MOCK_IMAGEDATA)} />);
+    const { asFragment } = render(
+      <ShowcaseImage imageSrc={toImgBase64PNG(MOCK_IMAGEDATA)} />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("uses alt text", () => {

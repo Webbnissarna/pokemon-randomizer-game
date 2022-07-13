@@ -46,10 +46,10 @@
       "",
       "describe(\"$1\", () => {",
       "  it(\"renders\", () => {",
-      "    const func = () =>",
+      "    const { asFragment } = ",
       "      render(<$1$0 />);",
       "",
-      "    expect(func).not.toThrow();",
+      "    expect(asFragment()).toMatchSnapshot();",
       "  });",
       "});",
       ""

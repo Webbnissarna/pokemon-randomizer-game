@@ -5,10 +5,11 @@ import TextInput from ".";
 
 describe("Text Input", () => {
   it("renders", () => {
-    const func = () =>
-      render(<TextInput value="" placeholder="" onChange={() => undefined} />);
+    const { asFragment } = render(
+      <TextInput value="" placeholder="" onChange={() => undefined} />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("has textbox role", () => {

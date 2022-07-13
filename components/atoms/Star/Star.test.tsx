@@ -3,8 +3,8 @@ import Star from ".";
 
 describe("Star", () => {
   it("renders", () => {
-    const func = () => render(<Star size={100} visible={true} />);
+    const { asFragment } = render(<Star size={100} visible={true} />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

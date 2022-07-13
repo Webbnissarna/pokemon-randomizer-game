@@ -9,15 +9,14 @@ import {
 
 describe("SimplePokemonInfo", () => {
   it("renders", () => {
-    const func = () =>
-      render(
-        <SimplePokemonInfo
-          gamePropGetter={mockPropGetter}
-          pokemon={mockPokemon}
-        />
-      );
+    const { asFragment } = render(
+      <SimplePokemonInfo
+        gamePropGetter={mockPropGetter}
+        pokemon={mockPokemon}
+      />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("shows GameProp properties", () => {

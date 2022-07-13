@@ -4,9 +4,9 @@ import Ball from ".";
 
 describe("Ball", () => {
   it("renders", () => {
-    const func = () => render(<Ball size="sm" />);
+    const { asFragment } = render(<Ball size="sm" />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("calls onClick", () => {

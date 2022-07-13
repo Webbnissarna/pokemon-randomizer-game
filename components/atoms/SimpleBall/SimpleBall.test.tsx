@@ -3,8 +3,8 @@ import SimpleBall from ".";
 
 describe("SimpleBall", () => {
   it("renders", () => {
-    const func = () => render(<SimpleBall size={100} />);
+    const { asFragment } = render(<SimpleBall size={100} />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

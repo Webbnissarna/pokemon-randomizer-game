@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Setup renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <div
+    class="css-rcez78-Box"
+  >
+    <div
+      class="css-1qwd1qz-Box"
+    >
+      <div
+        class="css-1d2fn-Box"
+      >
+        <input
+          checked=""
+          id=":r0:-2-player"
+          name=":r0:"
+          type="radio"
+          value="2-player"
+        />
+        <label
+          class="css-dzydor-Box"
+          for=":r0:-2-player"
+        >
+          2-player
+        </label>
+      </div>
+    </div>
+    <div
+      class="css-wimkxn-Box"
+    >
+      <div
+        class="css-1i6ye1s-Box"
+      >
+        <div
+          class="css-p1luab-Box"
+        >
+          <input
+            aria-label="Player 1 Name"
+            class="css-kdrqma-Box"
+            placeholder="Player 1 Name"
+            type="text"
+            value=""
+          />
+          <input
+            aria-label="Player 2 Name"
+            class="css-kdrqma-Box"
+            placeholder="Player 2 Name"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="css-fy5kkv-Box"
+          disabled=""
+        >
+          Play
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

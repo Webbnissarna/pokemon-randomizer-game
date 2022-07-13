@@ -4,11 +4,10 @@ import { mockPokemon, mockPropGetter } from "../../../utils/testHelper";
 
 describe("PokemonInfo", () => {
   it("renders", () => {
-    const func = () =>
-      render(
-        <PokemonInfo pokemon={mockPokemon} gamePropGetter={mockPropGetter} />
-      );
+    const { asFragment } = render(
+      <PokemonInfo pokemon={mockPokemon} gamePropGetter={mockPropGetter} />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

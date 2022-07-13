@@ -4,8 +4,8 @@ import { MOCK_ABILITY } from "../../../utils/testHelper";
 
 describe("AbilityDisplay", () => {
   it("renders", () => {
-    const func = () => render(<AbilityDisplay ability={MOCK_ABILITY} />);
+    const { asFragment } = render(<AbilityDisplay ability={MOCK_ABILITY} />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

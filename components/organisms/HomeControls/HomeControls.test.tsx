@@ -3,9 +3,10 @@ import HomeControls from ".";
 
 describe("HomeControls", () => {
   it("renders", () => {
-    const func = () =>
-      render(<HomeControls title="" onPlay={() => undefined} />);
+    const { asFragment } = render(
+      <HomeControls title="" onPlay={() => undefined} />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

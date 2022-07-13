@@ -3,8 +3,8 @@ import NamePropDisplay from ".";
 
 describe("NamePropDisplay", () => {
   it("renders", () => {
-    const func = () => render(<NamePropDisplay prop={{ mainProp: "A" }} />);
+    const { asFragment } = render(<NamePropDisplay prop={{ mainProp: "A" }} />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -4,17 +4,16 @@ import Button from ".";
 
 describe("Button", () => {
   it("renders", () => {
-    const func = () =>
-      render(
-        <Button
-          variant="positive"
-          size="sm"
-          text="Hello World"
-          onClick={() => undefined}
-        />
-      );
+    const { asFragment } = render(
+      <Button
+        variant="positive"
+        size="sm"
+        text="Hello World"
+        onClick={() => undefined}
+      />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("shows text", () => {

@@ -3,8 +3,8 @@ import TitleWithBall from ".";
 
 describe("TitleWithBall", () => {
   it("renders", () => {
-    const func = () => render(<TitleWithBall text="" />);
+    const { asFragment } = render(<TitleWithBall text="" />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

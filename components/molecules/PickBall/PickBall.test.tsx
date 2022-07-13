@@ -8,18 +8,17 @@ import {
 
 describe("PickBall", () => {
   it("renders", () => {
-    const func = () =>
-      render(
-        <PickBall
-          gamePropGetter={mockPropGetter}
-          pokemon={mockPokemon}
-          onClick={() => undefined}
-          showPokemon={false}
-          showStar={false}
-        />
-      );
+    const { asFragment } = render(
+      <PickBall
+        gamePropGetter={mockPropGetter}
+        pokemon={mockPokemon}
+        onClick={() => undefined}
+        showPokemon={false}
+        showStar={false}
+      />
+    );
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("shows GameProp properties", () => {

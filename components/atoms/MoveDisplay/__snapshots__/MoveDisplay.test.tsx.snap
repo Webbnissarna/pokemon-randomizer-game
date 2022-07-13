@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoveDisplay renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <div
+    class="css-1usc76v-Box"
+  >
+    <div
+      class="css-1siex4w-Box"
+    >
+      <div
+        class="css-1peva9n-Box"
+      >
+        <span
+          class="css-1peva9n-Box"
+        >
+          Normal
+        </span>
+      </div>
+      <span
+        class="css-1peva9n-Box"
+      >
+        Physical
+      </span>
+      <span
+        class="css-8jjk1d-Box"
+      >
+        Pound
+      </span>
+      <span
+        class="css-1peva9n-Box"
+      >
+        40
+      </span>
+      <span
+        class="css-1peva9n-Box"
+      >
+        35 PP
+      </span>
+      <span
+        class="css-1peva9n-Box"
+      >
+        100%
+      </span>
+    </div>
+    <span
+      class="css-gety84-Box"
+    >
+      The target is physically pounded with a long tail, a foreleg, or the like.
+    </span>
+  </div>
+</DocumentFragment>
+`;

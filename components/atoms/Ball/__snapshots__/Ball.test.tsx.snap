@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ball renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <button
+    class="css-y8g8p5-Box"
+  >
+    <svg
+      height="40"
+      style="filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 2px);"
+      version="1.1"
+      viewBox="0 0 26.458 26.458"
+      width="40"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        transform="translate(-91.771 -141.89)"
+      >
+        <path
+          d="m105 141.89a13.229 13.229 0 0 0-13.229 13.229h26.458a13.229 13.229 0 0 0-13.229-13.229z"
+          fill="var(--theme-ui-colors-ball-active-top)"
+          stop-color="#000000"
+          stroke-width=".7"
+        />
+        <path
+          d="m105 168.34a13.229 13.229 0 0 0 13.229-13.229h-26.458a13.229 13.229 0 0 0 13.229 13.229z"
+          fill="var(--theme-ui-colors-ball-active-bottom)"
+          stop-color="#000000"
+          stroke-width=".7"
+        />
+        <g
+          fill="var(--theme-ui-colors-ball-active-middle)"
+        >
+          <rect
+            height="1.8521"
+            stop-color="#000000"
+            stroke-width=".7"
+            width="26.458"
+            x="91.771"
+            y="153.26"
+          />
+          <rect
+            height="1.8521"
+            stop-color="#000000"
+            stroke-width=".7"
+            width="26.458"
+            x="91.771"
+            y="155.11"
+          />
+          <circle
+            cx="105"
+            cy="155.11"
+            r="4.6302"
+            stop-color="#000000"
+            stroke-width=".7"
+          />
+        </g>
+        <circle
+          cx="105"
+          cy="155.11"
+          fill="var(--theme-ui-colors-ball-active-bottom)"
+          r="2.6458"
+          stop-color="#000000"
+          stroke-width=".7"
+        />
+        <path
+          d="m50 0a50 50 0 0 0-50 50 50 50 0 0 0 20.811 40.557 50 50 0 0 1-11.561-31.932 50 50 0 0 1 50-50 50 50 0 0 1 29.203 9.418 50 50 0 0 0-38.453-18.043z"
+          fill-opacity=".25"
+          stop-color="#000000"
+          stroke-width="2.6457"
+          transform="matrix(.26458 0 0 .26458 91.771 141.89)"
+        />
+      </g>
+    </svg>
+  </button>
+</DocumentFragment>
+`;

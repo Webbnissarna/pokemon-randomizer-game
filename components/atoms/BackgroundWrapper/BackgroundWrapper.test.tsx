@@ -4,9 +4,9 @@ import { screen } from "@testing-library/react";
 
 describe("Background", () => {
   it("renders", () => {
-    const func = () => render(<BackgroundWrapper />);
+    const { asFragment } = render(<BackgroundWrapper />);
 
-    expect(func).not.toThrow();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders children", () => {
     const childId = "test-child";

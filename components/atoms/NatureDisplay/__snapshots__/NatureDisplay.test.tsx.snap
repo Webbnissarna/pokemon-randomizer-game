@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NatureDisplay renders 1`] = `
+<DocumentFragment>
+  <script>
+    (function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+} catch (e) {} })();
+  </script>
+  <div
+    class="css-fm1h7n-Box"
+  >
+    <span
+      class="css-3u1sqa-Box"
+    >
+      Naive
+    </span>
+    <div
+      class="css-j0o3ga-Box"
+    >
+      <div
+        class="css-1vgber0-Box"
+      >
+        <span
+          class="css-3u1sqa-Box"
+        >
+          +Spd
+        </span>
+      </div>
+      <div
+        class="css-1uwxv63-Box"
+      >
+        <span
+          class="css-3u1sqa-Box"
+        >
+          -Sp. Def
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
